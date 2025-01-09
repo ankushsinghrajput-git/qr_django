@@ -6,13 +6,13 @@ class QRCodeForm(forms.Form):
         max_length=50,
         label="Name",
         widget=forms.TextInput(
-            attrs={"class": "form-control", "placeholder": "Enter the title of QR"}
+            attrs={"class": "form-control", "placeholder": "Enter the title "}
         ),
     )
     url = forms.URLField(
         max_length=200,
         label="URL",
         widget=forms.URLInput(
-            attrs={"class": "form-control", "placeholder": "Enter ur URL"}
+            attrs={"class": "form-control", "placeholder": "Enter the URL"}
         ),
     )

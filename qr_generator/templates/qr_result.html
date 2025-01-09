@@ -17,14 +17,20 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="conatiner"><a href="" class="navbar-brand">Generate QR Code</a></div>
-    </nav>
+    <div class="background"
+        style="background-image: url('/media/bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container"><a href="" class="navbar-brand" style="color: #ff2200;">Generate QR Code</a></div>
+        </nav>
 
-    <!-- QR Form Result -->
-    <div class="container mt-5 align_items-center text-center">
-        <h2>{{ qr_name}}</h2>
-        <img src="{{ generated_qr_url}}" alt="QR Code">
+
+        <!-- QR Form Result -->
+        <div class="container align_items-center text-center" style="margin-top: 100px;">
+            <h2>{{ qr_name}}</h2>
+            <img src="{{ generated_qr_url}}" alt="QR Code" style="border: 2px solid #ff2200; border-radius: 10px;">
+            <div><a href="{{ generated_qr_url}}" download="{{ filename }}" class="btn btn-primary mt-3"
+                    style="background-color: #ff2200; border-color: #ff2200;">Download</a></div>
+        </div>
     </div>
 </body>
 

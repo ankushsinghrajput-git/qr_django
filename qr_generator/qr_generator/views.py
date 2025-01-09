@@ -21,7 +21,11 @@ def generate_qr_code(request):
             # QR URL
             generated_qr_url = os.path.join(settings.MEDIA_URL, filename)
 
-            context = {"qr_name": qr_name, "generated_qr_url": generated_qr_url}
+            context = {
+                "qr_name": qr_name.upper(),
+                "generated_qr_url": generated_qr_url,
+                "filename": filename,
+            }
             return render(request, "qr_result.html", context)
 
     else:

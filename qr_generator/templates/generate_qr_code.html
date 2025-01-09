@@ -17,18 +17,24 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="conatiner"><a href="" class="navbar-brand">Generate QR Code</a></div>
-    </nav>
+    <div class="background"
+        style="background-image: url('/media/bg.jpg'); background-position: center; background-repeat: no-repeat; background-size: cover; height: 100vh;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container"><a href="" class="navbar-brand" style="color: #ff2200;">Generate QR Code</a></div>
+        </nav>
 
-    <!-- QR Form -->
-    <div class="container mt-5" style="width: 600px; border: 2px solid #d3d3d3; border-radius: 10px; padding: 30px;">
-        <form action="{% url 'generate_qr_code' %}" method="POST">
-            {% csrf_token %}
 
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Generate</button>
-        </form>
+        <!-- QR Form -->
+        <div class="container"
+            style=" margin-top: 150px;width: 600px; border: 2px solid #ff2200; border-radius: 10px; padding:30px; background-image: url('bg.jpg');">
+            <form action="{% url 'generate_qr_code' %}" method="POST">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+                <button type="submit" class="btn btn-primary"
+                    style="background-color: #ff2200; border-color: #ff2200;">Generate</button>
+            </form>
+        </div>
     </div>
 </body>
 
